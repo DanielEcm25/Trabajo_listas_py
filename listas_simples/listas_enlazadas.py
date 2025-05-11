@@ -3,7 +3,6 @@ class Nodo:
         self.dato = dato
         self.siguiente = None
 
-
 class ListaEnlazada:
     def __init__(self):
         self.cabeza = None

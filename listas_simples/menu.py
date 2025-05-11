@@ -1,7 +1,7 @@
 import listas_enlazadas as listas_enlazadas
 from listas_enlazadas import *
 
-lista_simple = listas_enlazadas()
+lista_simple = listas_enlazadas.ListaEnlazada()
 while True:
     print("----Menú----\n"
     +"1. Agregar un dato al inicio\n"
@@ -42,7 +42,7 @@ while True:
             print("Lista: ")
             lista_simple.recorrer()
     elif opcion == "6":
-        longitud = lista_simple.imprimir_longitud()
+        longitud = lista_simple.obtener_longitud()
         print(f"La lista tiene: {longitud} elementos.")
     elif opcion == "7":
         print("Gracias por usar el programa")
