@@ -66,3 +66,52 @@ class lista_doble():
             self.cola = self.cola.anterior
             self.cola.siguiente = None
         self.longitud -= 1
+
+    def buscar(self, dato):
+        aux = self.cabeza
+        while aux is not None:
+            if aux.dato == dato:
+                return True
+            aux = aux.siguiente
+        return False
+    
+    def insertar_en_posicion(self, pos, dato):
+        if pos < 0 or pos > self.longitud:
+            print("Posición inválida")
+            return
+        if pos == 0:
+            self.agregar_inicio(dato)
+        elif pos == self.longitud:
+            self.agregar_final(dato)
+        else:
+            nuevo = Nodo(dato)
+            aux = self.cabeza
+            for _ in range(pos - 1):
+                aux = aux.siguiente
+            siguiente = aux.siguiente
+            aux.siguiente = nuevo
+            nuevo.anterior = aux
+            nuevo.siguiente = siguiente
+            siguiente.anterior = nuevo
+            self.longitud += 1
+    
+    def eliminar_en_posicion(self, pos):
+        if self.esta_vacia():
+            print("La lista está vacía.")
+            return
+        if pos < 0 or pos >= self.longitud:
+            print("Posición inválida")
+            return
+        if pos == 0:
+            self.eliminar_inicio()
+        elif pos == self.longitud - 1:
+            self.eliminar_final()
+        else:
+            aux = self.cabeza
+            for _ in range(pos):
+                aux = aux.siguiente
+            anterior = aux.anterior
+            siguiente = aux.siguiente
+            anterior.siguiente = siguiente
+            siguiente.anterior = anterior
+            self.longitud -= 1
