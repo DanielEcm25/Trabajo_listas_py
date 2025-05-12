@@ -61,10 +61,14 @@ while True:
         longitud = list_doble.imprimir_longitud()
         print(f"La lista tiene: {longitud} elementos.")
         
-    elif opcion == "11":
-        print("Gracias por usar el programa.")
-        break
-        
+    elif opcion == "8":
+        try:
+            pos = int(input("Ingrese la posición del dato a eliminar: "))
+            list_doble.eliminar_en_posicion(pos)
+            print("Dato eliminado correctamente.")
+        except ValueError:
+            print("Debe ingresar una posición válida.")
+    
     elif opcion == "9":
         dato = input("Ingrese el dato que desea buscar: ")
         encontrado = list_doble.buscar(dato)
@@ -81,14 +85,10 @@ while True:
             print("Dato insertado correctamente.")
         except ValueError:
             print("Debe ingresar una posición válida.")
-            
-    elif opcion == "8":
-        try:
-            pos = int(input("Ingrese la posición del dato a eliminar: "))
-            list_doble.eliminar_en_posicion(pos)
-            print("Dato eliminado correctamente.")
-        except ValueError:
-            print("Debe ingresar una posición válida.")
-            
+    
+    elif opcion == "11":
+        print("Gracias por usar el programa.")
+        break
+
     else:
         print("Opción no válida. Intente nuevamente.")
