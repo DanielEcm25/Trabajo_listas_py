@@ -90,7 +90,7 @@ class ListaEnlazada:
         while actual:
             elementos.append(str(actual.dato))
             actual = actual.siguiente
-        print(" -> ".join(elementos) + " -> None\n")
+        print(" -> ".join(elementos) + " -> None")
 
     def obtener_longitud(self):
         return self.longitud
