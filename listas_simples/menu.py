@@ -4,7 +4,7 @@ from listas_enlazadas import *
 lista_simple = ListaEnlazada()
 
 while True:
-    print("\---- Menú ----n")
+    print("\n---- Menú ----")
     print("1. Agregar un dato al inicio")
     print("2. Agregar un dato al final")
     print("3. Eliminar un dato al inicio")
@@ -84,5 +84,4 @@ while True:
 
     else:
         print("Opción no válida. Intente de nuevo.")
-
-    input("Presione Enter para continuar...")
+    input("\nPresione Enter para continuar...")
