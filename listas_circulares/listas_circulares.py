@@ -22,59 +22,49 @@ class lista_circular:
             aux = nuevo_dato
             aux.siguiente = self.cabeza
             self.cabeza = aux
-           nuevo_dato.siguiente = self.cabeza
-            self.cabeza = nuevo_dato
             self.cola.siguiente = self.cabeza
         self.longitud += 1
 
-@@ -31,21 +30,26 @@
+    def agregar_final(self,dato):
+        nuevo_dato = Nodo(dato)
+        if self.esta_vacia():
             self.cabeza = self.cola = nuevo_dato 
             self.cabeza.siguiente = self.cabeza
         else:
             aux = self.cola
             self.cola = aux.siguiente = nuevo_dato
-            self.cola.siguiente = nuevo_dato
-            self.cola = nuevo_dato
             self.cola.siguiente = self.cabeza
         self.longitud += 1
 
     def recorrer_lista(self):
-           if self.esta_vacia():
-            print("La lista está vacía.")
-            return
         aux = self.cabeza
         while True:
             print(aux.dato,end=" -> ")
-            print(aux.dato, end=" -> ")
             aux = aux.siguiente
             if aux == self.cabeza:
                 break
         print(f"({self.cabeza.dato})")
 
     def eliminar_inicio(self):
-        if self.esta_vacia():
-            return
         if self.cabeza == self.cola:
             self.cabeza = self.cola = None
         else:
-@@ -54,6 +58,8 @@
+            self.cabeza = self.cabeza.siguiente
+            self.cola.siguiente = self.cabeza 
         self.longitud -= 1
 
     def eliminar_final(self):
-         if self.esta_vacia():
-            return
         if self.cabeza == self.cola:
             self.cabeza = self.cola = None
         else:
-@@ -63,6 +69,56 @@
+            aux = self.cabeza
+            while aux.siguiente != self.cola:
+                aux = aux.siguiente
             aux.siguiente = self.cabeza
             self.cola = aux
         self.longitud -= 1
 
-def eliminar_en_posicion(self, pos):
-        if self.esta_vacia():
-            print("Lista vacía.")
-            return
+    def eliminar_en_posicion(self, pos):
         if pos < 0 or pos >= self.longitud:
             print("Posición inválida.")
             return
@@ -105,7 +95,6 @@ def eliminar_en_posicion(self, pos):
             nuevo.siguiente = aux.siguiente
             aux.siguiente = nuevo
             self.longitud += 1
-
 
     def buscar_dato(self, dato):
         if self.esta_vacia():
