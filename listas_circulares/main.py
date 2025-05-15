@@ -10,6 +10,10 @@ while True:
     +"5. Recorrer la lista\n"
     +"6. Imprimir longitud de la lista\n"
     +"7. Salir")
+    +"7. Insertar en una posición específica"\n"
+    +"8. Eliminar en una posición específica"\n"
+    +"9. Buscar un dato en la lista"\n"     
+    +"10. Salir")
     print("Seleccione una opción: ")
     opcion = input()        
     if opcion == "1":
@@ -41,7 +45,31 @@ while True:
     elif opcion == "6":
         longitud = list_Circular.imprimir_longitud()
         print(f"La lista tiene: {longitud} elementos")
-    elif opcion == "7":
+
+    elif opcion =="7": 
+    try:
+        dato = input("Ingrese el dato a insertar: ")
+        posicion = int(input("Ingrese la posición donde desea insertar: "))
+            list_Circular.insertar_en_posicion(dato,  posicion)
+        except ValueError:
+            print("Posición inválida. Debe ser un número entero.")
+
+    elif opcion == "8":
+     try:
+     posicion = int(input("Ingrese la posición del dato a eliminar: "))
+            list_Circular.eliminar_en_posicion(pos)
+        except ValueError:
+            print("Entrada inválida. Debe ser un número entero.")
+            
+    elif opcion == "9":
+    dato = input("Ingrese el dato a buscar: ")
+        posicion = list_Circular.buscar_dato(dato)
+        if posicion != -1:
+            print(f"El dato '{dato}' está en la posición {posicion}.")
+        else:
+            print(f"El dato '{dato}' no se encontró en la lista.")
+
+    elif opcion == "10":
         print("Gracias por usar el programa")
         break
     else:
