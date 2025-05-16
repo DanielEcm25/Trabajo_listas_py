@@ -7,18 +7,18 @@ listadc = ldc.ListaDobleCircular()
 
 while True:
     print("\n----Menú----\n"
-          +"1. Agregar un dato al inicio\n"
-          +"2. Agregar un dato al final\n"
-          +"3. Recorrer la lista de inicio a fin\n"
-          +"4. Recorrer la lista de fin a inicio\n"
-          +"5. Eliminar un dato al inicio de la lista\n"
-          +"6. Eliminar un dato al final de la lista\n"
-          +"7. Buscar un dato en la lista\n"
-          +"8. Imprimir longitud de la lista\n"
-          +"9. Buscar posición de un dato\n"               # +++ NUEVO +++
-          +"10. Eliminar dato en posición específica\n"  # +++ NUEVO +++
-          +"11. Insertar dato en posición específica\n" # +++ NUEVO +++
-          +"12. Salir\n")                                # número ajustado
+        +"1. Agregar un dato al inicio\n"
+        +"2. Agregar un dato al final\n"
+        +"3. Recorrer la lista de inicio a fin\n"
+        +"4. Recorrer la lista de fin a inicio\n"
+        +"5. Eliminar un dato al inicio de la lista\n"
+        +"6. Eliminar un dato al final de la lista\n"
+        +"7. Buscar un dato en la lista\n"
+        +"8. Imprimir longitud de la lista\n"
+        +"9. Buscar posición de un dato\n"               # +++ NUEVO +++
+        +"10. Eliminar dato en posición específica\n"  # +++ NUEVO +++
+        +"11. Insertar dato en posición específica\n" # +++ NUEVO +++
+        +"12. Salir\n")                                # número ajustado
     opcion = input("Seleccione una opción: ")
 
     if opcion == "1":

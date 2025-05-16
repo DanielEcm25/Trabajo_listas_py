@@ -12,7 +12,7 @@ while True:
     +"5. Recorrer la lista en orden ascendente\n"
     +"6. Recorrer la lista en orden descendente\n"
     +"7. Imprimir longitud de la lista\n"
-    +"8. Eliminar en una posición específica"
+    +"8. Eliminar en una posición específica\n"
     +"9. Buscar un dato\n"
     +"10. Insertar en una posición específica\n"
     +"11. Salir\n")
